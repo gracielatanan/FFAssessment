@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Contract Frontend</title>
-    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <title>Clothing Store</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.3.0/dist/web3.min.js"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"></script>
+    <script src="ff.js"></script>
 </head>
 <body>
-    <h1>Function Frontend</h1>
-    <div>
-        <label for="newValue">New Value:</label>
-        <input type="number" id="newValue">
-        <button id="setValueButton">Set Value</button>
-    </div>
-    <div>
-        <button id="getValueButton">Get Value</button>
-        <p id="currentValue"></p>
-    </div>
-
-    <script src="ff.js"></script>
+    <h1>Clothing Store</h1>
+    
+    <label for="name">Types of Clothes:</label>
+    <input type="text" id="name"><br><br>
+    
+    <label for="price">Price (in Ether):</label>
+    <input type="number" id="price" step="0.01"><br><br>
+    
+    <button onclick="listClothing()">List of Clothes</button><br><br>
+    
+    <label for="buyId">ID of Clothes to Buy:</label>
+    <input type="number" id="buyId"><br><br>
+    
+    <button onclick="buyClothing()">Buy Clothes</button><br><br>
+    
+    <div id="output"></div>
 </body>
 </html>
